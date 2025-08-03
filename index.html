@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,7 +42,11 @@
         .profile {
             position: relative;
             height: 220px;
-            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            /* background: linear-gradient(135deg, #00c6ff, #0072ff); */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/008/813/202/small/3d-render-of-flash-neon-and-light-glowing-on-dark-scene-speed-light-moving-lines-photo.jpg');
             display: flex;
             justify-content: center;
             align-items: center;
@@ -53,7 +58,7 @@
             height: 130px;
             border-radius: 50%;
             background: url('https://scontent.fdac22-1.fna.fbcdn.net/v/t39.30808-6/456481935_482741431349915_6545480630572242417_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeG9lN7AhMad_jem7zlRp81lEYkg5WX-6G8RiSDlZf7ob0_070TBteLVC2sORuBqzNZfApfS8-nTpZvuAkyLXVAV&_nc_ohc=fIJ_qtfANPwQ7kNvwFkMNGM&_nc_oc=AdkcCIbpZujDkODnq3QYceDGRopQZcXErI9u1F3KDVzGY6ZRLma2vn_m02mS34GZLNo&_nc_zt=23&_nc_ht=scontent.fdac22-1.fna&_nc_gid=UPbRj_rztOFPgsZd5ajB9Q&oh=00_AfSRg4ewDCLHnNeasySGfR0CIQcXzQVygRLD2LJhhI9bSQ&oe=6894A2F9') center/cover;
-            border: 5px solid #fff;
+            border: 5px solid transparent;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease;
         }
@@ -69,20 +74,26 @@
         }
 
         .header h1 {
-            font-size: calc(1.5rem + 0.5vw);
+            font-size: 38px;
+            font-weight: bold;
+            font-style: italic;
             color: #1e3c72;
             margin-bottom: 8px;
         }
 
         .header h2 {
-            font-size: calc(1rem + 0.3vw);
+            font-size: 22px;
+            font-weight: 500;
             color: #0072ff;
             font-weight: 400;
         }
 
         .details {
             padding: 20px;
-            background: #f9f9f9;
+            background: #0f0f0f;
+            width: 90%;
+            margin: 20px auto;
+            border-radius: 0 0 20px 20px;
         }
 
         .detail-box {
@@ -90,27 +101,39 @@
             align-items: center;
             margin-bottom: 12px;
             padding: 12px;
-            background: #fff;
+            background: rgb(27, 42, 43) !important;
             border-radius: 10px;
+            color: #fff;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .detail-box a {
+            color: #ffffff;
+            text-decoration: none;
+
+            &:hover {
+                color: #ebacac;
+                text-decoration: underline;
+            }
         }
 
         .detail-box:hover {
             transform: translateX(8px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 5px 20px rgba(95, 212, 230, 0.747);
         }
 
         .icon {
-            font-size: calc(1.2rem + 0.3vw);
-            color: #0072ff;
+            font-size: 20px;
             margin-right: 12px;
             min-width: 30px;
             text-align: center;
+            color: #ffffff;
         }
 
-        .info-text, .info-link {
-            font-size: calc(0.9rem + 0.2vw);
-            color: #333;
+        .info-text,
+        .info-link {
+            font-size: 16px;
+            color: #ffffff;
             text-decoration: none;
             word-break: break-word;
         }
@@ -119,6 +142,85 @@
             color: #0072ff;
             text-decoration: underline;
         }
+
+        .payment-icons {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .payment-icon {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .payment-icons a {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .payment-icons a:hover .payment-icon {
+            transform: scale(1.1);
+        }
+
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #0f0f0f;
+            color: #fff;
+        }
+
+        .footer .social {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .footer .social {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            padding: 20px;
+        }
+
+        .footer .social a {
+            height: 40px;
+            width: 40px;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #5482ff, #01ffff);
+            text-decoration: none;
+            margin-bottom: 12px;
+          box-shadow:
+                0 0 25px #ff9800,
+                0 0 45px #ffc107,
+                0 0 65px #fff176 inset;
+            /* inner glow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .footer .social a:hover {
+            transform: scale(1.1);
+              box-shadow:
+                0 0 15px #1af4fc,
+                0 0 30px #00eeff,
+                0 0 30px #00eeff,
+                0 0 30px #00eeff,
+                0 0 10px 5px rgba(0, 238, 255, 0.4),
+                /* soft outer glow all around */
+                0 0 60px #09e2ff inset;
+        }
+
+
 
         /* Tablet and smaller screens */
         @media (max-width: 768px) {
@@ -136,11 +238,11 @@
             }
 
             .header h1 {
-                font-size: calc(1.3rem + 0.5vw);
+                font-size: 40px !important;
             }
 
             .header h2 {
-                font-size: calc(0.9rem + 0.3vw);
+                font-size: 20px !important;
             }
 
             .details {
@@ -149,11 +251,16 @@
 
             .detail-box {
                 padding: 10px;
+                flex-direction: row !important;
+            }
+
+            .detail-box a {
+                font-size: 16px;
             }
         }
 
         /* Mobile screens */
-        @media (max-width: 480px) {
+        @media (max-width: 424px) {
             .card {
                 max-width: 95%;
             }
@@ -188,18 +295,60 @@
                 margin-bottom: 10px;
             }
 
+            .detail-box a {
+                font-size: 12px;
+            }
+
             .icon {
                 font-size: calc(1rem + 0.3vw);
                 margin-right: 10px;
                 min-width: 25px;
+                margin-bottom: 8px;
             }
 
-            .info-text, .info-link {
+            .info-text,
+            .info-link {
                 font-size: calc(0.8rem + 0.2vw);
+            }
+
+            .info-link {
+                font-size: calc(0.8rem + 0.2vw);
+            }
+
+            .payment-icon {
+                width: 25px;
+                height: 25px;
+            }
+
+            .payment-icons {
+                justify-content: center;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+
+            .detail-box {
+                flex-direction: column !important;
+                align-items: flex-start;
+            }
+
+            .info-link {
+                margin-bottom: 8px;
+            }
+
+            .payment-icons {
+                width: 100%;
+                justify-content: start;
+                align-items: start;
+            }
+
+            .payment-icon {
+                width: 20px;
+                height: 20px;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="card">
         <div class="profile">
@@ -212,27 +361,59 @@
         <div class="details">
             <div class="detail-box">
                 <span class="icon"><i class="fa-solid fa-house"></i></span>
-                <span class="info-text">Basrail, Ranisonkail, Thakurgaon</span>
+                <span class="info-text">Basrail, Ranisonkail,
+                    Thakurgaon</span>
             </div>
             <div class="detail-box">
                 <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-                <a class="info-link" href="mailto:rarobiuislam01707654499@gmail.com">rarobiuislam01707654499@gmail.com</a>
+                <a class="info-link"
+                    href="mailto:rarobiuislam01707654499@gmail.com">rarobiuislam01707654499@gmail.com</a>
             </div>
             <div class="detail-box">
                 <span class="icon"><i class="fa-solid fa-phone"></i></span>
-                <a class="info-link" href="tel:+8801707654499">+88 0170 765 44 99</a>
+                <a class="info-link" href="tel:+8801707654499">+88 0170 765
+                    44 99</a>
+                <div class="payment-icons">
+                    <a href="https://wa.me/8801707654499" target="_blank">
+                        <img src="https://www.pngplay.com/wp-content/uploads/8/Whatsapp-Logo-Download-Free-PNG.png"
+                            alt="WhatsApp" class="payment-icon">
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="https://www.logo.wine/a/logo/BKash/BKash-Icon-Logo.wine.svg" alt="BKash"
+                            class="payment-icon">
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="https://freepnglogo.com/images/all_img/1725618764nagad-horizontal-logo-png.png"
+                            alt="Nagad" class="payment-icon">
+                    </a>
+                </div>
             </div>
             <div class="detail-box">
                 <span class="icon"><i class="fa-brands fa-whatsapp"></i></span>
-                <a class="info-link" href="tel:+8801334063090">+88 0133 406 30 90</a>
+                <a class="info-link" href="tel:+8801334063090">+88 0133 406
+                    30 90</a>
             </div>
             <div class="detail-box">
                 <span class="icon"><i class="fa-brands fa-facebook"></i></span>
-                <a class="info-link" href="https://www.facebook.com/robiulislamrobiulislam0170765" target="_blank">Alex Robiul Islam</a>
+                <a class="info-link" href="https://www.facebook.com/robiulislamrobiulislam0170765" target="_blank">Alex
+                    Robiul Islam</a>
             </div>
             <div class="detail-box">
-                <span class="icon"><i class="fa-brands fa-square-instagram"></i></span>
-                <a class="info-link" href="#">Instagram</a>
+                <span class="icon"><i class="fa-brands fa-instagram"></i></span>
+                <a class="info-link" href="https://www.instagram.com/md.robiulislam4499/" target="_blank">Instagram</a>
+            </div>
+            <div class="footer">
+                <div class="social">
+                    <a href="https://www.facebook.com/robiulislamrobiulislam0170765" target="_blank"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/md.robiulislam4499/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/robiulislamrobiulislam0170765/" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <p>Robiul | All right Reserved.</p>
             </div>
         </div>
     </div>
@@ -263,4 +444,5 @@
         });
     </script>
 </body>
+
 </html>
