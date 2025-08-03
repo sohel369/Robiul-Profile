@@ -77,8 +77,14 @@
             font-size: 38px;
             font-weight: bold;
             font-style: italic;
-            color: #1e3c72;
+            color: #dd0606;
             margin-bottom: 8px;
+            text-shadow: 0 0 30px rgba(255, 0, 0, 0.726);
+
+            &:hover {
+                transition: transform 0.5s ease;
+                transform: scale(1.05);
+            }
         }
 
         .header h2 {
@@ -86,6 +92,25 @@
             font-weight: 500;
             color: #0072ff;
             font-weight: 400;
+            display: inline-block;
+
+            &:before {
+                content: '';
+                display: block;
+                width: 60px;
+                height: 2px;
+                background: #0072ff;
+                margin: 0 auto 10px;
+                margin-bottom: 5px;
+            }
+
+            text-shadow: 0 0 30px rgba(0, 114, 255, 0.726);
+            font-style: oblique;
+
+            &:hover {
+                transform: rotate(360deg);
+                transition: transform 0.5s ease;
+            }
         }
 
         .details {
@@ -200,7 +225,7 @@
             background: linear-gradient(135deg, #5482ff, #01ffff);
             text-decoration: none;
             margin-bottom: 12px;
-          box-shadow:
+            box-shadow:
                 0 0 25px #ff9800,
                 0 0 45px #ffc107,
                 0 0 65px #fff176 inset;
@@ -210,7 +235,7 @@
 
         .footer .social a:hover {
             transform: scale(1.1);
-              box-shadow:
+            box-shadow:
                 0 0 15px #1af4fc,
                 0 0 30px #00eeff,
                 0 0 30px #00eeff,
