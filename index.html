@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Card - Md. Robiul Islam Robi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            padding: 15px;
+        }
+
+        .card {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            background: rgba(255, 255, 255, 0.97);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .profile {
+            position: relative;
+            height: 220px;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .profile-image {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background: url('https://scontent.fdac22-1.fna.fbcdn.net/v/t39.30808-6/456481935_482741431349915_6545480630572242417_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeG9lN7AhMad_jem7zlRp81lEYkg5WX-6G8RiSDlZf7ob0_070TBteLVC2sORuBqzNZfApfS8-nTpZvuAkyLXVAV&_nc_ohc=fIJ_qtfANPwQ7kNvwFkMNGM&_nc_oc=AdkcCIbpZujDkODnq3QYceDGRopQZcXErI9u1F3KDVzGY6ZRLma2vn_m02mS34GZLNo&_nc_zt=23&_nc_ht=scontent.fdac22-1.fna&_nc_gid=UPbRj_rztOFPgsZd5ajB9Q&oh=00_AfSRg4ewDCLHnNeasySGfR0CIQcXzQVygRLD2LJhhI9bSQ&oe=6894A2F9') center/cover;
+            border: 5px solid #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .profile-image {
+            transform: scale(1.15);
+        }
+
+        .header {
+            padding: 20px;
+            text-align: center;
+            background: #fff;
+        }
+
+        .header h1 {
+            font-size: calc(1.5rem + 0.5vw);
+            color: #1e3c72;
+            margin-bottom: 8px;
+        }
+
+        .header h2 {
+            font-size: calc(1rem + 0.3vw);
+            color: #0072ff;
+            font-weight: 400;
+        }
+
+        .details {
+            padding: 20px;
+            background: #f9f9f9;
+        }
+
+        .detail-box {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            padding: 12px;
+            background: #fff;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .detail-box:hover {
+            transform: translateX(8px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .icon {
+            font-size: calc(1.2rem + 0.3vw);
+            color: #0072ff;
+            margin-right: 12px;
+            min-width: 30px;
+            text-align: center;
+        }
+
+        .info-text, .info-link {
+            font-size: calc(0.9rem + 0.2vw);
+            color: #333;
+            text-decoration: none;
+            word-break: break-word;
+        }
+
+        .info-link:hover {
+            color: #0072ff;
+            text-decoration: underline;
+        }
+
+        /* Tablet and smaller screens */
+        @media (max-width: 768px) {
+            .card {
+                max-width: 90%;
+            }
+
+            .profile {
+                height: 180px;
+            }
+
+            .profile-image {
+                width: 110px;
+                height: 110px;
+            }
+
+            .header h1 {
+                font-size: calc(1.3rem + 0.5vw);
+            }
+
+            .header h2 {
+                font-size: calc(0.9rem + 0.3vw);
+            }
+
+            .details {
+                padding: 15px;
+            }
+
+            .detail-box {
+                padding: 10px;
+            }
+        }
+
+        /* Mobile screens */
+        @media (max-width: 480px) {
+            .card {
+                max-width: 95%;
+            }
+
+            .profile {
+                height: 150px;
+            }
+
+            .profile-image {
+                width: 90px;
+                height: 90px;
+            }
+
+            .header {
+                padding: 15px;
+            }
+
+            .header h1 {
+                font-size: calc(1.1rem + 0.5vw);
+            }
+
+            .header h2 {
+                font-size: calc(0.8rem + 0.3vw);
+            }
+
+            .details {
+                padding: 12px;
+            }
+
+            .detail-box {
+                padding: 8px;
+                margin-bottom: 10px;
+            }
+
+            .icon {
+                font-size: calc(1rem + 0.3vw);
+                margin-right: 10px;
+                min-width: 25px;
+            }
+
+            .info-text, .info-link {
+                font-size: calc(0.8rem + 0.2vw);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="profile">
+            <div class="profile-image"></div>
+        </div>
+        <div class="header">
+            <h1>Md. Robiul Islam Robi</h1>
+            <h2>Graphic Designer</h2>
+        </div>
+        <div class="details">
+            <div class="detail-box">
+                <span class="icon"><i class="fa-solid fa-house"></i></span>
+                <span class="info-text">Basrail, Ranisonkail, Thakurgaon</span>
+            </div>
+            <div class="detail-box">
+                <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                <a class="info-link" href="mailto:rarobiuislam01707654499@gmail.com">rarobiuislam01707654499@gmail.com</a>
+            </div>
+            <div class="detail-box">
+                <span class="icon"><i class="fa-solid fa-phone"></i></span>
+                <a class="info-link" href="tel:+8801707654499">+88 0170 765 44 99</a>
+            </div>
+            <div class="detail-box">
+                <span class="icon"><i class="fa-brands fa-whatsapp"></i></span>
+                <a class="info-link" href="tel:+8801334063090">+88 0133 406 30 90</a>
+            </div>
+            <div class="detail-box">
+                <span class="icon"><i class="fa-brands fa-facebook"></i></span>
+                <a class="info-link" href="https://www.facebook.com/robiulislamrobiulislam0170765" target="_blank">Alex Robiul Islam</a>
+            </div>
+            <div class="detail-box">
+                <span class="icon"><i class="fa-brands fa-square-instagram"></i></span>
+                <a class="info-link" href="#">Instagram</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Smooth animation on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const card = document.querySelector('.card');
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            setTimeout(() => {
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, 150);
+
+            // Fallback for touch devices (replace hover with tap)
+            const detailBoxes = document.querySelectorAll('.detail-box');
+            detailBoxes.forEach(box => {
+                box.addEventListener('touchstart', () => {
+                    box.style.transform = 'translateX(8px)';
+                    box.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.15)';
+                });
+                box.addEventListener('touchend', () => {
+                    box.style.transform = 'translateX(0)';
+                    box.style.boxShadow = 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
