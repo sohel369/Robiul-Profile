@@ -359,15 +359,17 @@
 
         /* Mobile screens */
         @media (max-width: 424px) {
-            body{
-                background-size: 100% 100%;
+            body {
+                background-size: cover;
+                padding: 10px;
             }
             .card {
-                max-width: 95%;
+                /* width: 95% !important; */
+                max-width: 100%;
             }
 
             .profile {
-                height: 150px;
+                height: 150px auto;
             }
 
             .profile-image {
@@ -376,11 +378,11 @@
             }
 
             .header {
-                padding: 15px;
+                /* padding: 15px; */
             }
 
             .header h1 {
-                font-size: 20px !important;
+                font-size: 24px !important;
             }
 
             .header h2 {
@@ -397,7 +399,7 @@
             }
 
             .detail-box a {
-                font-size: 12px;
+                font-size: 16px;
             }
 
             .icon {
@@ -423,8 +425,12 @@
 
             .payment-icons {
                 justify-content: center;
-                flex-wrap: wrap;
                 align-items: center;
+                gap: 10px;
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
             }
 
             .detail-box {
