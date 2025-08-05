@@ -150,6 +150,13 @@
             transform: rotate(360deg);
             transition: transform 0.5s ease;
         }
+        h3 {
+            font-size: 18px;
+            color: #333;
+            margin-top: 10px;
+            font-weight: 300;
+            font-style: italic;
+        }
 
         .details {
             padding: 20px;
@@ -278,6 +285,9 @@
 
         /* Tablet and smaller screens */
         @media (max-width: 768px) {
+            body{
+                background-size: 100% 100%;
+            }
             .card {
                 max-width: 90%;
             }
@@ -297,6 +307,9 @@
 
             .header h2 {
                 font-size: 20px !important;
+            }
+            .header h3 {
+                font-size: 16px !important;
             }
 
             .details {
@@ -346,6 +359,9 @@
 
         /* Mobile screens */
         @media (max-width: 424px) {
+            body{
+                background-size: 100% 100%;
+            }
             .card {
                 max-width: 95%;
             }
@@ -459,6 +475,7 @@
         <div class="header">
             <h1>Md. Robiul Islam Robi</h1>
             <h2>Graphic Designer</h2>
+            <h3>Complete Graphic Design & <br>Printing Solution.</h3>
         </div>
         <div class="details">
             <div class="detail-box">
